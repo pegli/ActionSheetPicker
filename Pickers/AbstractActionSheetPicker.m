@@ -330,7 +330,7 @@
         return;
     }
     else if ((self.containerView) && NO == CGRectIsEmpty(self.presentFromRect)) {
-        [popover presentPopoverFromRect:_presentFromRect inView:_containerView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        [popover presentPopoverFromRect:_containerView.bounds inView:_containerView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         return;
     }
     // Unfortunately, things go to hell whenever you try to present a popover from a table view cell.  These are failsafes.
