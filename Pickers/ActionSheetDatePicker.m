@@ -74,6 +74,15 @@
         [datePicker setCalendar:[self.locale objectForKey:NSLocaleCalendar]];
     }
     
+    // optional date picker properties
+    if (self.minimumDate) {
+        datePicker.minimumDate = self.minimumDate;
+    }
+    
+    if (self.maximumDate) {
+        datePicker.maximumDate = self.maximumDate;
+    }
+    
     //need to keep a reference to the picker so we can clear the DataSource / Delegate when dismissing (not used in this picker, but just in case somebody uses this as a template for another picker)
     self.pickerView = datePicker;
     

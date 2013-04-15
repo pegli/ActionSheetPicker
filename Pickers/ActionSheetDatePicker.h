@@ -30,6 +30,8 @@
 @interface ActionSheetDatePicker : AbstractActionSheetPicker
 
 @property (nonatomic, strong) NSLocale * locale;
+@property (nonatomic, strong) NSDate * minimumDate;
+@property (nonatomic, strong) NSDate * maximumDate;
 
 + (id)showPickerWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target action:(SEL)action origin:(id)origin;
 
